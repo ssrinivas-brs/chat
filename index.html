@@ -13,29 +13,37 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/game.css" />
     <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.7.2.2.min.js"></script>
   </head>
   <body>
     <header>
       <div class="d-flex bg-gradient">
         <div class="d-flex flex-grow-1">
-          <nav class="courseTitle">
-          </nav>
+          <nav class="courseTitle"></nav>
           <div class="flex-grow-1">
+            <div class="ReactTitle ps-3 d-flex align-items-center">
+              <!-- <img src="assets/img/react-2@2x.png" alt="logo" /> -->
+              <h3 class="mb-0">JS Apps with APIs</h3>
+            </div>
             <div class="d-flex ps-3 align-items-center">
               <div class="flex-grow-1">
                 <h4>Chat App</h4>
+                <p class="pb-0 mb-0 text-start">
+                  Purpose: Simple Chat app using PubNub API
+                </p>
               </div>
               <div class="link me-3">
-                  <p class="mb-0 py-0">
-
-                      <a href="https://www.pubnub.com/docs" target="_blank">
-                          https://www.pubnub.com/docs
-                      </a>
-                      <img src="assets/img/noun-link.png" class="ms-2" />
-                  </p>
+                <p class="mb-0 py-0">
+                  <a href="https://www.pubnub.com/docs" target="_blank">
+                    https://www.pubnub.com/docs
+                  </a>
+                  <!-- <img src="assets/img/noun-link.png" class="ms-2" /> -->
+                </p>
               </div>
             </div>
           </div>
@@ -45,8 +53,12 @@
 
     <main role="main" class="container pt-5">
       <div class="card position-relative">
-      <div class="card-header position-relative text-start" id="user">Chat Box</div>
-        <div class="btn-container form-groups position-absolute messages-divs w-100 overflow-hidden">
+        <div class="card-header position-relative text-start" id="user">
+          Chat Box
+        </div>
+        <div
+          class="btn-container form-groups position-absolute messages-divs w-100 overflow-hidden"
+        >
           <div id="messages" class="w-100"></div>
         </div>
         <div class="form-groups position-absolute messages-div w-100">
@@ -54,11 +66,36 @@
             <div class="row justify-content-md-center">
               <div class="col-5">
                 <div class="form-items">
-                  <input id="message" type="text" placeholder="Enter Message" class="form-control" autofocus autocomplete="off" />
+                  <input
+                    id="message"
+                    type="text"
+                    placeholder="Enter Message"
+                    class="form-control"
+                    autofocus
+                    autocomplete="off"
+                  />
+                  <p id="emoji-btn">&#127773;</p>
+                  <label for="file-input" id="attachment-icon">
+                    <br />
+                    <img
+                      src="assets/img/image-icon.png"
+                      alt="Attachment Icon"
+                    />
+                  </label>
+                  <input
+                    type="file"
+                    id="file-input"
+                    style="display: none"
+                    accept=".jpg, .jpeg, .png"
+                  />
                 </div>
               </div>
               <div class="col-1">
-                <input type='submit' class="btn btn-primary" value="Send Message" />
+                <input
+                  type="submit"
+                  class="btn btn-primary"
+                  value="Send Message"
+                />
               </div>
             </div>
           </form>
@@ -70,20 +107,21 @@
       <div class="d-flex justify-content-center px-5">
         <div>
           <button
-            onclick="setTheme('#1A4B84')"
+            onclick="setTheme('#789bb17a')"
             class="theme-switch theme-switch-chathams_blue"
           ></button>
           <button
-            onclick="setTheme('#991E14')"
+            onclick="setTheme('#dfd89381')"
             class="theme-switch theme-switch-tamarillo"
           ></button>
           <button
-            onclick="setTheme('#FEAD06')"
+            onclick="setTheme('#fed50676')"
             class="theme-switch theme-switch-yellow_sea"
           ></button>
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
     <script src="assets/js/script.js" defer></script>
   </body>
 </html>
